@@ -2833,7 +2833,7 @@ class _SwiperScreenState extends State<SwiperScreen> {
       }
 
       final model = GenerativeModel(
-        model: 'gemini-2.5-flash',
+        model: 'gemini-2.0-flash',
         apiKey: apiKey,
       );
 
@@ -2882,19 +2882,20 @@ class _SwiperScreenState extends State<SwiperScreen> {
 
       GenerateContentResponse? response;
       int retryCount = 0;
-      while (retryCount < 3) {
+      while (retryCount < 4) {
         try {
           response = await model.generateContent([Content.text(prompt)]);
           break; // Success
         } catch (e) {
-          if (e.toString().contains('503')) {
+          final errorStr = e.toString();
+          if (errorStr.contains('503') || errorStr.contains('429') || errorStr.contains('Quota') || errorStr.contains('demand')) {
             retryCount++;
-            if (retryCount >= 3) {
-              throw 'Yapay zeka sunucuları şu anda çok yoğun. Lütfen birkaç saniye bekleyip tekrar deneyin. (503 High Demand)';
+            if (retryCount >= 4) {
+              throw 'Google Yapay Zeka sunucularında şu an aşırı yoğunluk var. Lütfen birkaç saniye sonra tekrar deneyin.';
             }
-            await Future.delayed(Duration(seconds: 2 * retryCount)); // Exponential backoff: 2s, 4s
+            await Future.delayed(Duration(seconds: 2 * retryCount));
           } else {
-            rethrow;
+            throw 'Yapay zeka bağlantısında bir sorun oluştu. Lütfen internetinizi kontrol edip tekrar deneyin.';
           }
         }
       }
@@ -2949,7 +2950,12 @@ class _SwiperScreenState extends State<SwiperScreen> {
       }
     } catch (e) {
       setState(() {
-        generatedRoute = "Rota oluşturulurken bir hata oluştu: $e";
+        String msg = e.toString().replaceAll('Exception: ', '');
+        if (msg.contains('Yapay zeka') || msg.contains('Google')) {
+          generatedRoute = msg;
+        } else {
+          generatedRoute = "Yapay zeka bağlantısında beklenmeyen bir sorun oluştu. Lütfen internetinizi kontrol edip tekrar deneyin.";
+        }
         isGeneratingRoute = false;
       });
     }
