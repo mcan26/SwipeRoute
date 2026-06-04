@@ -126,6 +126,27 @@ class _AuthScreenState extends State<AuthScreen> {
   bool _isSignUp = false;
 
   Future<void> _signInWithGoogle() async {
+    if (!isSupabaseInitialized) {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          backgroundColor: const Color(0xFF1C1C24),
+          title: const Text('Giriş Kapalı', style: TextStyle(color: Colors.white)),
+          content: const Text(
+            'Güvenlik sebebiyle veritabanı bağlantısı akademik projede devre dışı bırakılmıştır.\n\nLütfen projeyi tam kapasite test etmek için "Ziyaretçi Olarak Devam Et" seçeneğini kullanın.',
+            style: TextStyle(color: Colors.white70),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('Anladım', style: TextStyle(color: Color(0xFF00FFC2))),
+            ),
+          ],
+        ),
+      );
+      return;
+    }
+
     // macOS'ta Google Sign-In native olarak desteklenmez ve ekstra yapılandırma gerektirir.
     if (Theme.of(context).platform == TargetPlatform.macOS) {
       showDialog(
@@ -191,6 +212,27 @@ class _AuthScreenState extends State<AuthScreen> {
   }
 
   Future<void> _emailAuth() async {
+    if (!isSupabaseInitialized) {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          backgroundColor: const Color(0xFF1C1C24),
+          title: const Text('Giriş Kapalı', style: TextStyle(color: Colors.white)),
+          content: const Text(
+            'Güvenlik sebebiyle veritabanı bağlantısı akademik projede devre dışı bırakılmıştır.\n\nLütfen projeyi tam kapasite test etmek için "Ziyaretçi Olarak Devam Et" seçeneğini kullanın.',
+            style: TextStyle(color: Colors.white70),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('Anladım', style: TextStyle(color: Color(0xFF00FFC2))),
+            ),
+          ],
+        ),
+      );
+      return;
+    }
+
     if (_emailController.text.isEmpty || _passwordController.text.isEmpty) {
       return;
     }
