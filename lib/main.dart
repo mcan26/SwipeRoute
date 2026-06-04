@@ -2039,13 +2039,26 @@ class _SavedRoutesScreenState extends State<SavedRoutesScreen> {
           return;
         }
 
+        final prefs = await SharedPreferences.getInstance();
+        final savedStr = prefs.getString('offline_routes') ?? '[]';
+        List parsedOffline;
+        try {
+          parsedOffline = json.decode(savedStr) as List;
+        } catch (_) {
+          parsedOffline = [];
+        }
+
         final response = await Supabase.instance.client
             .from('saved_routes')
             .select('*')
             .eq('user_id', user.id);
 
         setState(() {
-          _routes = List<Map<String, dynamic>>.from(response).reversed.toList();
+          final merged = [
+            ...List<Map<String, dynamic>>.from(parsedOffline),
+            ...List<Map<String, dynamic>>.from(response)
+          ];
+          _routes = merged.reversed.toList();
           _isLoading = false;
         });
       } catch (e) {
