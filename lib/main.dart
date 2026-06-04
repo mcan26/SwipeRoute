@@ -2867,8 +2867,26 @@ class _SwiperScreenState extends State<SwiperScreen> {
       Harika bir Markdown tablosuyla genel bir özet yap ve ardından gün gün tüm bu detayları büyüleyici bir dille anlat. Sonuna da 'İyi yolculuklar!' yaz.
       ''';
 
-      final response = await model.generateContent([Content.text(prompt)]);
-      final aiText = response.text;
+      GenerateContentResponse? response;
+      int retryCount = 0;
+      while (retryCount < 3) {
+        try {
+          response = await model.generateContent([Content.text(prompt)]);
+          break; // Success
+        } catch (e) {
+          if (e.toString().contains('503')) {
+            retryCount++;
+            if (retryCount >= 3) {
+              throw 'Yapay zeka sunucuları şu anda çok yoğun. Lütfen birkaç saniye bekleyip tekrar deneyin. (503 High Demand)';
+            }
+            await Future.delayed(Duration(seconds: 2 * retryCount)); // Exponential backoff: 2s, 4s
+          } else {
+            rethrow;
+          }
+        }
+      }
+
+      final aiText = response?.text;
       
       if (aiText == null || aiText.isEmpty) {
         throw 'Yapay zeka boş yanıt döndürdü. Lütfen tekrar deneyin.';
