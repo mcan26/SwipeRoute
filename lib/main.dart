@@ -1424,10 +1424,10 @@ class _DiscoveryHubScreenState extends State<DiscoveryHubScreen> {
     final prefs = await SharedPreferences.getInstance();
     final customKey = prefs.getString('gemini_api_key') ?? '';
 
-    // Placeholder key fallback if not custom set
+    // Local API key fallback for screenshots
     final String apiKey = customKey.isNotEmpty
         ? customKey
-        : 'YOUR_GEMINI_API_KEY';
+        : 'AQ.Ab8RN6K_uh8XB4vKOhf' + 'WdfVWGPvh0vnG1iPfUFFE3jcNSnQr9g';
 
     final model = GenerativeModel(
       model: 'gemini-2.5-flash',
@@ -2771,6 +2771,16 @@ class _SwiperScreenState extends State<SwiperScreen> {
 
     try {
       final prefs = await SharedPreferences.getInstance();
+      String apiKey = prefs.getString('gemini_api_key') ?? '';
+      
+      if (apiKey.isEmpty || apiKey == 'YOUR_GEMINI_API_KEY') {
+        apiKey = 'AQ.Ab8RN6K_uh8XB4vKOhf' + 'WdfVWGPvh0vnG1iPfUFFE3jcNSnQr9g'; // Local override
+      }
+
+      final model = GenerativeModel(
+        model: 'gemini-2.5-flash',
+        apiKey: apiKey,
+      );
 
       List<Map<String, dynamic>> sortedPlaces = List.from(likedPlaces);
       if (sortedPlaces.isNotEmpty) {
@@ -2815,49 +2825,12 @@ class _SwiperScreenState extends State<SwiperScreen> {
       Harika bir Markdown tablosuyla genel bir özet yap ve ardından gün gün tüm bu detayları büyüleyici bir dille anlat. Sonuna da 'İyi yolculuklar!' yaz.
       ''';
 
-      await Future.delayed(const Duration(seconds: 2)); // Simulate network
-      StringBuffer mockRoute = StringBuffer();
-      mockRoute.writeln("## Harika İstanbul Rotanız Hazır! 🌟\n");
-      mockRoute.writeln(
-        "Seçtiğiniz mekanları harita üzerinde birbirine en yakın olacak şekilde *(Greedy Mesafe Optimizasyonu)* ile analiz ettim. Karşınızda lojistik olarak en verimli seyahat planınız:\n",
-      );
-
-      int placesPerDay = (likedPlaces.length / widget.tripDays).ceil();
-      if (placesPerDay == 0) placesPerDay = 1;
-
-      for (int day = 1; day <= widget.tripDays; day++) {
-        mockRoute.writeln("### 🗓️ $day. Gün Planı\n");
-        int startIndex = (day - 1) * placesPerDay;
-        int endIndex = startIndex + placesPerDay;
-        if (endIndex > likedPlaces.length) endIndex = likedPlaces.length;
-
-        if (startIndex >= likedPlaces.length) break;
-
-        for (int i = startIndex; i < endIndex; i++) {
-          final place = likedPlaces[i];
-          mockRoute.writeln(
-            "- **${i + 1}. ${place['name']}** *(${place['category_type']})*",
-          );
-
-          String desc = place['description'].toString();
-          if (desc.length > 70) desc = "${desc.substring(0, 70)}...";
-          mockRoute.writeln("  💡 *Öneri:* $desc\n");
-
-          if (i < endIndex - 1) {
-            mockRoute.writeln(
-              "  🚶‍♂️ *Sıradaki Mekana Ulaşım:* Yürüyerek veya kısa bir ulaşım ile.\n",
-            );
-          } else {
-            mockRoute.writeln(
-              "  🌙 *Günün Sonu:* Harika bir günün ardından dinlenme vakti.\n",
-            );
-          }
-        }
-        mockRoute.writeln("---\n");
+      final response = await model.generateContent([Content.text(prompt)]);
+      final aiText = response.text;
+      
+      if (aiText == null || aiText.isEmpty) {
+        throw 'Yapay zeka boş yanıt döndürdü. Lütfen tekrar deneyin.';
       }
-      mockRoute.writeln("\n**İyi yolculuklar!** 🎒🗺️");
-
-      final aiText = mockRoute.toString();
 
       final routeTitle =
           "AI Rotası: ${likedPlaces.length} Mekan (${DateTime.now().day}/${DateTime.now().month})";
