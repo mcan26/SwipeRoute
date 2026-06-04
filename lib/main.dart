@@ -2864,6 +2864,16 @@ class _SwiperScreenState extends State<SwiperScreen> {
         generatedRoute = aiText;
         isGeneratingRoute = false;
       });
+
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text(
+              'AI Rotası "Kayıtlı Rotalarım" sekmesine başarıyla eklendi! 🎉',
+            ),
+          ),
+        );
+      }
     } catch (e) {
       setState(() {
         generatedRoute = "Rota oluşturulurken bir hata oluştu: $e";
