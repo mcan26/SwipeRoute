@@ -37,11 +37,13 @@ Veriseti özellikleri:
 - **Gerçekçi Ücretlendirme Sınıflandırması:** Lüks restoranlar için "💸💸💸 Luxe", müzeler için "💸💸 Premium", parklar ve sokak lezzetleri için "💸 Uygun" şeklinde statik ve gerçeği yansıtan fiyat seviyeleri.
 
 ## 4. Problem Çözümü
-SwipeRoute uygulamasının çözüm mimarisi şu 4 temel adımdan oluşmaktadır:
+SwipeRoute uygulamasının çözüm mimarisi şu 6 temel adımdan oluşmaktadır:
 1. **Swipe Mekaniği ile Seçim:** Kullanıcılar dinamik kart yapısı (Card Swiper) üzerinde mekanları sağa (beğen) veya sola (geç) kaydırarak kendi zevklerine uygun bir portföy oluştururlar.
 2. **Coğrafi Optimizasyon (Greedy TSP):** Seçilen mekanlar, başlangıç noktasından itibaren birbirine en yakın olacak şekilde mesafe hesaplama (Distance Sorting) algoritması ile sıralanır. Bu sayede harita üzerinde zikzak çizmeyen, lojistik açıdan en verimli güzergah elde edilir.
 3. **Yapay Zeka Destekli Planlama:** Sıralanmış mekanlar Google Gemini API'ye gönderilerek kullanıcının seçtiği seyahat süresine (örn. 3 gün) bölünür. Yapay zeka, metro, vapur gibi ulaşım şekillerini ve ziyaret sıralarını detaylandıran kişiselleştirilmiş bir metin üretir.
-4. **Veri Kalıcılığı ve Harita Entegrasyonu:** Elde edilen rota, modern Backend-as-a-Service olan Supabase veritabanına ve cihazın yerel depolamasına (offline mode) kaydedilir. Kullanıcı "Kayıtlı Rotalarım" ekranından rotasını görüntüleyebilir veya Google Haritalar'a aktararak adım adım yönlendirme (navigation) başlatabilir.
+4. **Veri Kalıcılığı ve Harita Entegrasyonu:** Elde edilen rota, modern Backend-as-a-Service olan Supabase veritabanına ve cihazın yerel depolamasına (offline mode) kaydedilir. Kullanıcı "Kayıtlı Rotalarım" ekranından rotasını ve `flutter_map` tabanlı interaktif haritayı görüntüleyebilir veya Google Haritalar'a aktararak adım adım yönlendirme (navigation) başlatabilir.
+5. **Dinamik Hava Durumu ve Bütçe Analizi:** Open-Meteo API entegrasyonu ile anlık hava durumu verileri sağlanır. Ek olarak Gemini tarafından üretilen finansal veriler, `fl_chart` kütüphanesi kullanılarak interaktif Pasta Grafik (Pie Chart) formatında bütçe analizine dönüştürülür.
+6. **Oyunlaştırma (Gamification) ve Dil Seçenekleri:** Kullanıcı sadakatini artırmak için yerel hafıza tabanlı bir rozet/başarı sistemi (Profil ekranı) kurulmuştur. Turistlerin kullanımını kolaylaştırmak adına dinamik Çoklu Dil Desteği (İngilizce/Türkçe) projeye entegre edilmiştir.
 
 ## 5. GitHub Linki
 **Geliştirici:** Murat Can Işık  

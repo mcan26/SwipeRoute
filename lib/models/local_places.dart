@@ -239,6 +239,7 @@ class LocalPlaceData {
       'rating': 4.8,
       'reviews_count': 1757,
       'is_favorite': false,
+      'price_level': 3,
       'category_type': 'Food',
       'images': [
         "https://places.googleapis.com/v1/places/ChIJ54CM5Yi3yhQR2UiIkn19O7g/photos/Ab43m-uGjRkVSbJ5My-s5caTGATVjsFzMew1JHpzr8jyEM_SX5zJ-CEvrJjiaOiRFR2P_jHJp_hsXM47pFlhBARzpfwkjTeT3IJtyrsYMn5VFEpWldQPf5Slm8wqXxxyVUKBq28KtjOfhiHjAXEZu_PCtacKogHflkMa6f8AjRKmZCwNGEmuo1OT-GzW9TuXwNiW8mQsyMzNDeSGL0pYxopWbh1RdbfaFAO2Jqf5tF1KATjjLVHFsHtRs9z8N24YSNAxOOVYuW-fvaK1QZOjVyryDHD7wEt94rjqjRn2MJnvLEn7Z9BmQksQx33quw1wSWhfwattxdEZEL1BuJi7E03tAMxvYE5iltY_EGvYHz8fd1xDciU35HSx5I4VrYggxfGQVmll5f_pWXe7Ju56W6OIqFclGtjglYVuZqdcWFJPgyrx-aVL9QNYU_od0PWzO17B/media?maxHeightPx=1000&maxWidthPx=1000&key=AIzaSyDyLwaoP66HXnpLRQIEucIrGEiO0l710S8",
@@ -410,7 +411,7 @@ class LocalPlaceData {
       'reviews_count': 7967,
       'is_favorite': false,
       'price_level': 1,
-      'category_type': 'Scenery',
+      'category_type': 'Food',
       'images': [
         "https://places.googleapis.com/v1/places/ChIJnSNJOuS5yhQRRBTgaPEz5t8/photos/Ab43m-uGAiAjnUg0BodRKQR8XHJrmTWFPNfFdbIU93j07ex0OcAyO6nAQKj3_y1o5DnAm89j1jfbUH2zZn9xXvoIo8buNGld81ydDL926ZkPmAcRWLnIPVx9OumjjMQgPahXdWmcrh9Y6kBrYHrxNCTKqOU1Lqwq939ovWNau7A13DIT5TJRQ6D3cACzx25P71le1oNyUc3LHI-MDrI1IyYNPIBadeTdIaydAbdxJEklgp0asM2g9EyKAzeerCTIYSwb_qjNvPT9tBNXTeDNgfNYVrEZbxzE4PI-ck-b5R55ObmpgZEZEc2SMUqKaQUjYEIFjM1LBP2DGwrgK-_O_hDJjWY9t9JN7M7sfKdsot8zs3KbvhCz-k0ABbrXgYZ1VnF5TpPQqHR2Zd_Pzlg4KeNZhlF5EMA1aIwwZw9YgSC4RdXMPw/media?maxHeightPx=1000&maxWidthPx=1000&key=AIzaSyDyLwaoP66HXnpLRQIEucIrGEiO0l710S8",
         "https://places.googleapis.com/v1/places/ChIJnSNJOuS5yhQRRBTgaPEz5t8/photos/Ab43m-u6bJWTyujSBMAPHuh37B1sy2HXnRyT6y9GD0EY8YMxKPMEbTMWpqBFnr5WgbWeVBRsB_M55d-B9R3q6gHCgcNpW84rhbW49pbqp8zAaLuuZ2WQJGLbVYnNkeeh0bGg4NmntfW85lSMbUufvkNIeXmK6Ky-r2z1tFN9Gwq2RA_nQ9Iv6Tm0AOoAnEbaVDxIaMo48AhjtdVhSIXE2BQIKGc2Zf0tCLHmN7PsF0vKxLeUzZ3U6hhB6lDx9Y0ZXmKddoFG4oodub-Ijn7b9Dh1QMs_I2-b4Oq1lwhuj8RrImkSd3mWb161iPYTgaDN9i9_Ys7u-H4PaC5v5Lrvl9MmgsY8kp8C6NZ76FLPNn3-qbwb09Z5OvUnvne6c0QE9Mfuhm55D7g6psl7zdEZwQ0noxt4oQ1NwwbC6o4pcU-Fanzi1Q/media?maxHeightPx=1000&maxWidthPx=1000&key=AIzaSyDyLwaoP66HXnpLRQIEucIrGEiO0l710S8",
@@ -1646,7 +1647,7 @@ class LocalPlaceData {
       'reviews_count': 134856,
       'is_favorite': false,
       'price_level': 2,
-      'category_type': 'Scenery',
+      'category_type': 'History',
       'images': [
         "https://places.googleapis.com/v1/places/ChIJJxwBkr65yhQRrk9EN29vbiM/photos/Ab43m-tgppogx08gFr3owiOE-ajv_fKBd8LdfwziwwO2Dco1Rint89mCBixrNJnTGgpNlEt3smqv_uR6JKhWbH8jOvfvn3lFR8dKuoNM4nAflB3Bgu8YENMgcSUOyZh8GT21Gb5BjkNdENLutTunAvVBPmE4HanF6mI5DXnGFFWe8l3NYN3A70pWLr2vgg18NTFx9O_fNEnTKxDutk0bftXaWLj2wqTY6XSf3_OPFAqDAbEaYZhZY7UurdH_t6HYYp0mD8AphQ0ieCa5ad9spjNG0DOFlu6cB-pRk7ku9RMDJ1ZX_TFIFAr99SkqfskUEERT73-v8dD1kPufWkx9AYRQ0hmB2ccRGuQ4OrZiXoWjnwWsV-1XI0e6LMfVS_GrW_KmsDSmtnotj3BxAK3n6E3l2DzX0k4UMFs4H-Bjb218x11g2Gyk/media?maxHeightPx=1000&maxWidthPx=1000&key=AIzaSyDyLwaoP66HXnpLRQIEucIrGEiO0l710S8",
         "https://places.googleapis.com/v1/places/ChIJJxwBkr65yhQRrk9EN29vbiM/photos/Ab43m-uIFb5wANMknl_kGTmR-vo-V2XoQvxqImsPrPL5ez-1wyAMpWpZ5KznjJBcL8E67gBKNE3z9jPKruhBsFpaNhWl3fi3dKrOSwC7wGkfgH0z2-kRG1yTb8Qz-Aljl3BPf-rLSYY02N2bnlzc8pTCalKbsLfuNiTZBsKwexedH_zofYlt75ofh57jemBWosnK3iXLXugUwzmfSVWnhrTgiMLDdMggOppyRrvG1Y5onHyZtUAAVQ0UYuF22ZuvfbnnwvsEvtFGejSMyIJMXPjxGeykaVAPRN62WrXBtruJt--bpDEGGI6xLZgHb5J6pmI61Mr1mLWg_GVh6Cjf4M0851bZSQOfvuU3h4Al0XJnb5iuEdVNmR9cfmrF9kz7j7B04PRQrivFoQ5GLPkVjUTqHZ1fbm80jlSuOVS8ZlHlSds/media?maxHeightPx=1000&maxWidthPx=1000&key=AIzaSyDyLwaoP66HXnpLRQIEucIrGEiO0l710S8",
@@ -1874,7 +1875,7 @@ class LocalPlaceData {
       'reviews_count': 1388,
       'is_favorite': false,
       'price_level': 2,
-      'category_type': 'Scenery',
+      'category_type': 'History',
       'images': [
         "https://places.googleapis.com/v1/places/ChIJjxv03Y-5yhQRfHmedM0Uhx0/photos/Ab43m-vOzoxmqY1yu1XvlwQd0e889mxq86Nm5NepIcJ7MqmCsXTPjS4Nhndc9izM_frzqb4G7afN_X7CGDvOY7RK-1ShJ1gp--tQ3dlwn2TiM1OUU1Vl_sJHSpIHYtxXOcIV66Ws8AObzjgv88H3_WpL_k_7RXDBifxDdoKh4CLcYhaHxSJL1NQUQaN_E-pXpWh4u-I5QbhEAl4skwFQ9VeFiGdiKNf9mNGjUAzLXeWfc_0tETWQl4gOYRaMe3zGhLoGULz4HLEqWh4biV8LivyjiIRpgLjSv8aVtgJmnMaxqn6qEOcDglRK0k91mKSOYgjnTnxPvB1RlINvF9Xct7Pv4pBmshSMI_BjAkzni7yTwVKzRbTekPTT_Y-knl1ucJibNfQRUw4TwVZ75tKw4tep7TNJPllKQ_2mHihxxCo7jkjoQ3k/media?maxHeightPx=1000&maxWidthPx=1000&key=AIzaSyDyLwaoP66HXnpLRQIEucIrGEiO0l710S8",
         "https://places.googleapis.com/v1/places/ChIJjxv03Y-5yhQRfHmedM0Uhx0/photos/Ab43m-uJhpfwse2vjsCdNt0U-R2fXSdaeIfjGJvfYvRBdwe5no3BAppK8h1EI7sosgD1BQelIt9Kkf4krQDN8eNfRuo_MUzahg1quKiHviFx2LQKcUbWwIE5GAkm5EGsVuN4j1a7HO0TDHoApoI6MmtV2UAyl43gfmxv9fMZm6slNXUpOnofsNyzKRq0nl5E3u4Qx0dLJUbDFRBKRNGWTTF81NkoN_fFXAvBz0E3zj_12D7lxABDyjbnk3ufx_T3VB4SI_fr3HlKNtHWfcE0D1K34EZ2nA-pMxviPnJKFQkguRJR-K3oT7eRNqFBLINKWa5hwNrSq4oKOXk0_xsZlkQRlLDCaz76sxJJKYcH56QsUNW8WQcOZSuRSwd9PDbZUdtoU-bUN4dNf66OeXKXBzwlm7Iy-yq3D-hi5ZJsMJZPMD3ghQ/media?maxHeightPx=1000&maxWidthPx=1000&key=AIzaSyDyLwaoP66HXnpLRQIEucIrGEiO0l710S8",
@@ -1969,7 +1970,7 @@ class LocalPlaceData {
       'reviews_count': 1761,
       'is_favorite': false,
       'price_level': 2,
-      'category_type': 'Scenery',
+      'category_type': 'History',
       'images': [
         "https://places.googleapis.com/v1/places/ChIJK401fFW3yhQRmn7nub7KCU8/photos/Ab43m-uYXHQ4tisTUgsMHkt9VCMJVTTVvypP9ZrNuTwe8BVl6xCw25PrlETO41tNPg_IjQMd2MpJvdHE12CfkTdAcSV5IU8i91Qvgvv5r7F_LLWQVpYNvrImijbBfggSTyhvd3kk9MAkUlWzhGH_6-3EUZLFHmM6PMsfPFRtqNY7qTyQ8xqGXZoVG1vqeZoSUe2uy4eRBBJk9eFxOEWjZgd5tqwT4bJ47EG833gy-oVnZgHaZhIQ4o6nC1QiRbvgSmAnzb-qijF4aBeOldWDTO7vb_mid1jNv3ixYutnX1bseK3cfmwwLJak-7nqDu1i1LjcBruqevzBBLsVrujX6D6OW2hJ3FT7h6mx-jYaWqYR96St9NPDTytdVtvMhZp_KKBkci6ZoEwhC2rq9DS_U0qEdIU2QY8fiqENWr447LuNCoY/media?maxHeightPx=1000&maxWidthPx=1000&key=AIzaSyDyLwaoP66HXnpLRQIEucIrGEiO0l710S8",
         "https://places.googleapis.com/v1/places/ChIJK401fFW3yhQRmn7nub7KCU8/photos/Ab43m-u04u5WYo9wK4fou_1FGvC-z3UYdMcLDE3OOaRzfURzN5g40c6TTxJPuaObCnu8ajnryZzpmUueKKTBaXc3Hza55fSG9ru1q6AiwwtKrnXRvIc3m8xWHgMbl2BhzcPrRb-JGvxscU3GghgwdJlXXNOG6nxkXgPL2sJrFYPyWYjVixA5DASgt08LRZ0d2jhqb9oLc4REMvNSIL84w0TlcxuXXOHzx8mmcda4sceTOyG4i1EKksQ1lGBmPVe6QpYyFJD15BCZ5kJHAlv1wjMLUvNykpjsFZRmaknDunDIKfS3qjXGDn6elY_ZzN5YFVjOerQ3FMk-UVCuYth0Zy3I1KI2kFAJz5Gw8Ph7rKK_b9QnWlpn8GOVP8EaJZNotBGa3zKN0SQATrrFQsYkT4lhHbJ36rQIXSiR4JlW2HYm3y2m3g/media?maxHeightPx=1000&maxWidthPx=1000&key=AIzaSyDyLwaoP66HXnpLRQIEucIrGEiO0l710S8",
@@ -2972,7 +2973,7 @@ class LocalPlaceData {
       'lat': 41.055838099999995,
       'lng': 28.667820799999998,
       'description':
-          'Alışveriş merkezinin içinde çocuklara hitap eden kapalı tırmanış bölgesi. 💡 Tüyo: Rüzgarlı günlerde biraz serin olabilir, yanına ince bir ceket almayı düşünebilirsin.',
+          'Alışveriş merkezinin içinde çocuklara hitap eden kapalı tırmanış bölgesi. 💡 Tüyo: Etkinlikler için rahat spor kıyafetler ve spor ayakkabı tercih etmelisin.',
       'rating': 4,
       'reviews_count': 488,
       'is_favorite': false,
@@ -3409,7 +3410,7 @@ class LocalPlaceData {
       'lat': 41.0331623,
       'lng': 28.983809299999994,
       'description':
-          'Canlı aktörleri ve korku filmlerini aratmayan senaryosuyla adrenalin tutkunlarının mekanı. 💡 Tüyo: Rüzgarlı günlerde biraz serin olabilir, yanına ince bir ceket almayı düşünebilirsin.',
+          'Canlı aktörleri ve korku filmlerini aratmayan senaryosuyla adrenalin tutkunlarının mekanı. 💡 Tüyo: Arkadaş grubunla gitmen heyecanı ikiye katlayacaktır!',
       'rating': 4.7,
       'reviews_count': 2386,
       'is_favorite': false,
@@ -3428,7 +3429,7 @@ class LocalPlaceData {
       'lat': 40.992787299999996,
       'lng': 29.042509799999998,
       'description':
-          'Kadıköy\'de ürpertici efektleri ve zorlu şifreleriyle cesaret testi niteliğinde bir oda kaçış oyunu. 💡 Tüyo: Rüzgarlı günlerde biraz serin olabilir, yanına ince bir ceket almayı düşünebilirsin.',
+          'Kadıköy\'de ürpertici efektleri ve zorlu şifreleriyle cesaret testi niteliğinde bir oda kaçış oyunu. 💡 Tüyo: Şifreleri çözerken etrafı dikkatlice incelemeyi unutma!',
       'rating': 4.9,
       'reviews_count': 4566,
       'is_favorite': false,
@@ -3447,7 +3448,7 @@ class LocalPlaceData {
       'lat': 40.9914627,
       'lng': 29.0407981,
       'description':
-          'Sürpriz aktörler ve karanlık odalarıyla çığlık çığlığa bir macera yaşatmayı garanti eden korku mekanı. 💡 Tüyo: En iyi fotoğraf kareleri için gün batımından hemen önceki \'Altın Saat\'i kaçırma.',
+          'Sürpriz aktörler ve karanlık odalarıyla çığlık çığlığa bir macera yaşatmayı garanti eden korku mekanı. 💡 Tüyo: İçeride koşmak yerine sakin adımlarla ilerlemek daha güvenlidir.',
       'rating': 4.3,
       'reviews_count': 1538,
       'is_favorite': false,
