@@ -265,8 +265,7 @@ class _DiscoveryHubScreenState extends State<DiscoveryHubScreen> {
           "name": "Gerçek ve Doğrulanmış Mekan Adı",
           "description": "Mekanın atmosferini anlatan resmi ve net ${AppTranslations.isEnglish ? 'İngilizce' : 'Türkçe'} açıklama.",
           "lat": 41.8902,
-          "lng": 12.4922,
-          "image_url": "Unsplash üzerinden bu mekanın ruhunu yansıtan yüksek çözünürlüklü gezi fotoğrafı linki."
+          "lng": 12.4922
         }
       ]
     ''';
@@ -294,7 +293,7 @@ class _DiscoveryHubScreenState extends State<DiscoveryHubScreen> {
         'description': item['description'] ?? 'Harika bir nokta.',
         'lat': double.tryParse(item['lat'].toString()) ?? 0.0,
         'lng': double.tryParse(item['lng'].toString()) ?? 0.0,
-        'image_url': item['image_url'] ?? getCategoryImage(_selectedCategory),
+        'image_url': getCategoryImage(_selectedCategory), // KESİNLİKLE HALÜSİNASYONSUZ LOKAL GÖRSEL
         'category_type': _selectedCategory,
       });
     }
