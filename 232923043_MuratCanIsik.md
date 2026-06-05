@@ -51,11 +51,13 @@ SwipeRoute uygulamasının çözüm mimarisi şu 6 temel adımdan oluşmaktadır
 
 ## 6. Ekler (Uygulama Ekran Görüntüleri)
 
-- **Görsel 1: Ana Ekran ve Kaydırma (Swipe) Arayüzü**
-  *(Buraya mekanların olduğu, sağa-sola kaydırılabilen ana ekran fotoğrafını yapıştırınız)*
+- **Görsel 1: Keşif Sonu Arayüzü (Swipe)**
+  ![Keşif Sonu](./assets/screenshots/screenshot_success.png)
 
-- **Görsel 2: Yapay Zeka veya Bypass Destekli Günlük Rota**
-  *(Buraya uygulamanın 1. Gün, 2. Gün şeklinde oluşturduğu planın fotoğrafını yapıştırınız)*
+- **Görsel 2: Yapay Zeka Destekli Günlük Rota ve Tablo Analizi**
+  ![Yapay Zeka Rota Detayı](./assets/screenshots/screenshot_route_detail.png)
+  ![Yapay Zeka Rota Tablosu](./assets/screenshots/screenshot_route_table.png)
 
-- **Görsel 3: Kayıtlı Rotalarım ve Harita Entegrasyonu**
-  *(Buraya "Kayıtlı Rotalarım" sekmesinin veya rota detaylarının fotoğrafını yapıştırınız)*
+- **Görsel 3: Harita Entegrasyonu ve Google Maps Yönlendirmesi**
+  ![Google Maps Harita Entegrasyonu](./assets/screenshots/screenshot_maps_1.png)
+  ![Google Maps Tam Ekran](./assets/screenshots/screenshot_maps_2.png)

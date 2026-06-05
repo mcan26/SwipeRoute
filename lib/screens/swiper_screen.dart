@@ -1315,10 +1315,12 @@ class _SwiperScreenState extends State<SwiperScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      bottom: false,
-      child: Column(
-        children: [
+    return Scaffold(
+      backgroundColor: const Color(0xFFF7F9FC),
+      body: SafeArea(
+        bottom: false,
+        child: Column(
+          children: [
           // FLOATING HEADER
           Padding(
             padding: const EdgeInsets.fromLTRB(24, 20, 24, 16),
@@ -1460,6 +1462,6 @@ class _SwiperScreenState extends State<SwiperScreen> {
           ),
         ],
       ),
-    );
+    ));
   }
 }
