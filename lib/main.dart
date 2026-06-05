@@ -2833,7 +2833,7 @@ class _SwiperScreenState extends State<SwiperScreen> {
       }
 
       final model = GenerativeModel(
-        model: 'gemini-3.5-flash',
+        model: 'gemini-2.5-pro',
         apiKey: apiKey,
       );
 
