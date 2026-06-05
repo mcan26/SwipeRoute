@@ -1,31 +1,6 @@
-import 'dart:convert';
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:flutter_card_swiper/flutter_card_swiper.dart';
-import 'package:google_generative_ai/google_generative_ai.dart';
-import 'package:http/http.dart' as http;
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:pdf/pdf.dart';
-import 'package:pdf/widgets.dart' as pw;
-import 'package:printing/printing.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:share_plus/share_plus.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
-
 import '../main.dart'; // For globals
-import '../config/supabase_config.dart';
-import '../models/local_places.dart';
 
-import 'settings_bottom_sheet.dart';
-import 'discovery_hub_screen.dart';
-import 'saved_routes_screen.dart';
 import 'swiper_screen.dart';
 
 // -----------------------------------------------------------------------------
@@ -323,12 +298,11 @@ class _VibeCheckScreenState extends State<VibeCheckScreen> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => MainScaffoldScreen(
-                                selectedCategories: _selectedCategories
-                                    .toList(),
-                                tripDays: _selectedDays.toInt(),
+                              builder: (context) => SwiperScreen(
                                 cityCode: _selectedCity,
+                                selectedCategories: _selectedCategories.toList(),
                                 isOffline: widget.isOffline,
+                                tripDays: _selectedDays.toInt(),
                               ),
                             ),
                           );
